@@ -1,13 +1,138 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	width: 100%;
+	margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.window {
+	text-align: center;
+}
+
+.navbar {
+	margin: 30px;
+}
+
+.navbar-link {
+	margin: 0 20px;
+
+	color: #264653;
+
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+}
+
+.navbar-link:hover {
+	color: #2a9d8f;
+}
+
+.home {
+	margin: 0;
+	padding: 100px 0 40px 0;
+	width: 100%;
+	height: 270px;
+}
+
+.tracks, .artists {
+	margin: 0;
+	padding: 20px 0 10px 0;
+	width: 100%;
+
+	position: relative;
+}
+
+.tracks {
+	background-color: #f4a261;
+}
+
+.artists {
+	background-color: #e9c46a;
+}
+
+.home {
+	background: #2a9d8f;
+}
+
+.home-title {
+	font-family: 'Zen Dots', cursive;
+
+	-webkit-text-stroke: 0.5px #fff;
+	-webkit-text-fill-color: transparent;
+}
+
+.login-button {
+	background-color: #fff;
+	color: #264653;
+
+	padding: 10px;
+
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	border: none;
+}
+
+.login-button:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+h2 {
+  	white-space: nowrap;
+  	position: absolute;
+	right: 95%;
+	top: 18%;
+	z-index: 1;
+	transform-origin: top right 0;
+	transform: rotate( 270deg );
+
+	font-family: 'Zen Dots', cursive;
+	font-size: 40px;
+	-webkit-text-stroke: 0.5px #264653;
+	-webkit-text-fill-color: transparent;
+}
+
+.row-item {
+	display: inline-block;
+	margin: 0 20px 10px 0;
+	position: relative;
+
+	height: 180px;
+	width: 180px;
+	
+	cursor: pointer;
+}
+
+.row-item.show-text {
+	background: #2a9d8f;
+}
+
+.row-item img {
+	height: 180px;
+	width: 180px;
+	object-fit: cover;
+}
+
+.row-item.show-text img {
+	opacity: 0.7;
+	filter: blur(5px);
+}
+
+.row-item p {
+	-webkit-text-stroke: 1px #fff;
+	-webkit-text-fill-color: transparent;
+
+	margin: 5px 0 0 0;
+	position: absolute;
+	top: 30%;
+  	left: 5px;
+
+  	text-align: left;
+
+	font-family: 'Zen Dots', cursive;
+	font-size: 20px;
+
+	overflow-wrap: anywhere;
+	
+	display: none;
+}
+
+.row-item.show-text p {
+	display: block;
 }
