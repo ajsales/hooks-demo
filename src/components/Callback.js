@@ -64,7 +64,9 @@ export default function Callback(props) {
 					};
 					response = await spotify.getArtistTopTracks(artist.id, 'US');
 					console.log(response);
-					entry.preview = response.tracks[0].preview_url;
+					entry.preview = response.tracks
+						? response.tracks[0].preview_url
+						: null;
 					topArtists[timeRange][i] = entry;
 				}
 			}
