@@ -57,7 +57,7 @@ export default function Callback(props) {
 				for (let i = 0; i < 10; i++) {
 					let artist = artists[i];
 					let entry = {
-						img: artist.images && artist.images[0]
+						img: artist.images && artist.images.length > 0
 							? artist.images[0].url
 							: 'https://img.icons8.com/clouds/200/000000/spotify.png';
 						name: artist.name,
