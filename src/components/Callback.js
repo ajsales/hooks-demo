@@ -52,7 +52,6 @@ export default function Callback(props) {
 			topArtists.allTime = response.items;
 
 			for (const [timeRange, artists] of Object.entries(topArtists)) {
-				let artists = topArtists[timeRange];
 				for (let i = 0; i < 10; i++) {
 					let artist = artists[i];
 					let entry = {
