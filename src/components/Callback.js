@@ -59,7 +59,7 @@ export default function Callback(props) {
 					let entry = {
 						img: artist.images && artist.images.length > 0
 							? artist.images[0].url
-							: 'https://img.icons8.com/clouds/200/000000/spotify.png';
+							: 'https://img.icons8.com/clouds/200/000000/spotify.png',
 						name: artist.name,
 					};
 					response = await spotify.getArtistTopTracks(artist.id, 'US');
