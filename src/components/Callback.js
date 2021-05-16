@@ -30,7 +30,7 @@ export default function Callback(props) {
 					const trackObj = {
 						img: song.album.images && song.album.images.length > 0
 							? song.album.images[0].url
-							: 'https://img.icons8.com/clouds/200/000000/spotify.png';
+							: 'https://img.icons8.com/clouds/200/000000/spotify.png',
 						name: song.name + ' by ' + artists.join(', '),
 						preview: song.preview_url
 					};
@@ -64,7 +64,7 @@ export default function Callback(props) {
 					};
 					response = await spotify.getArtistTopTracks(artist.id, 'US');
 					console.log(response);
-					entry.preview = response.tracks[0].preview_url;
+					entry.preview = response.tracks[0].preview_url,
 					topArtists[timeRange][i] = entry;
 				}
 			}
