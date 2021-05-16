@@ -28,7 +28,9 @@ export default function Callback(props) {
 					let artists = song.artists.map(artist => artist.name);
 					artists = artists.filter(artist => !song.name.includes(artist));
 					const trackObj = {
-						img: song.album.images[0].url,
+						img: song.album.images && song.album.images.length > 0
+							? song.album.images[0].url
+							: 'https://img.icons8.com/clouds/200/000000/spotify.png';
 						name: song.name + ' by ' + artists.join(', '),
 						preview: song.preview_url
 					};
@@ -55,7 +57,9 @@ export default function Callback(props) {
 				for (let i = 0; i < 10; i++) {
 					let artist = artists[i];
 					let entry = {
-						img: artist.images[0].url,
+						img: artist.images && artist.images[0]
+							? artist.images[0].url
+							: 'https://img.icons8.com/clouds/200/000000/spotify.png';
 						name: artist.name,
 					};
 					response = await spotify.getArtistTopTracks(artist.id, 'US');
