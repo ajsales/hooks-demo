@@ -4,7 +4,7 @@ export default function spotifyRequestUrl() {
 	if (window.location.host === 'localhost:3000') {
 		redirect_uri = 'http://localhost:3000/callback';
 	} else {
-		redirect_uri = '';
+		redirect_uri = 'https://shrouded-castle-50245.herokuapp.com/callback';
 	}
 
 	const params = {
