@@ -16,11 +16,9 @@ export default function Callback(props) {
 
 			let response;
 			response = await spotify.getMyTopTracks({limit: 10, time_range: 'short_term'});
-			console.log(response);
 			topTracks.recent = response.items;
 
 			response = await spotify.getMyTopTracks({limit: 10, time_range: 'long_term'});
-			console.log(response);
 			topTracks.allTime = response.items;
 
 			for (const [timeRange, tracks] of Object.entries(topTracks)) {
@@ -46,11 +44,9 @@ export default function Callback(props) {
 
 			let response;
 			response = await spotify.getMyTopArtists({limit: 10, time_range: 'short_term'});
-			console.log(response);
 			topArtists.recent = response.items;
 
 			response = await spotify.getMyTopArtists({limit: 10, time_range: 'long_term'});
-			console.log(response);
 			topArtists.allTime = response.items;
 
 			for (const [timeRange, artists] of Object.entries(topArtists)) {
@@ -63,7 +59,6 @@ export default function Callback(props) {
 						name: artist.name,
 					};
 					response = await spotify.getArtistTopTracks(artist.id, 'US');
-					console.log(response);
 					entry.preview = response.tracks
 						? response.tracks[0].preview_url
 						: null;
